@@ -1,29 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/*More headers goes there*/
 
+/*betty style doc for function main goes there*/
 /**
- * main - Entry point
- * Return: Always 0
+ * main - main function to generate a random number
+ *
+ * Return:Always 0 (success)
  */
 int main(void)
 {
-
 	int n;
-	int a;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	a = n % 10;
-	if (a > 5)
+	/* your code goes there */
+	if (n > 0)
 	{
-		printf("Last digit of %d is %d and is greated than 5\n", n, a);
-	} else if (a == 0)
+		printf("%d is positive\n", n);
+	}
+	else if (n == 0)
 	{
-		printf("Last digit of %d is %d and is 0\n", n, a);
-	} else if (a < 0)
+		printf("%d is zero\n", n);
+	}
+	else if (n < 0)
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, a);
+		printf("%d is negative\n", n);
 	}
 	return (0);
 }
